@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <p><marquee behavior="alternate"><i>Welcome</i></marquee></p>
+        <p><marquee behavior="alternate"><i>Welcome </i></marquee></p>
     <h1><b><i>SHEREHESHA MAEVENT</i></b></h1>
     </header>
     <hr>
@@ -27,7 +27,7 @@
         <table class="table table-hover table-striped">
             <tr><td>About us</td></tr>
             <tr><td>comment</td></tr>
-            <tr><td><a href="event list conn.php">Your Events</a></td></tr>
+            <tr><td><a href="event email.php">Your Events</a></td></tr>
         </table>
          </div>
           <script>
@@ -41,7 +41,8 @@
             }
         </script>
         </div>
-        <div class="col-lg-9" style="background-color:goldenrod;">
+        <input type="button" style="" class="button btn-warning btn-sm" onclick="tcc()" value="ADD EVENT">
+        <div id="hidenn" class="hidden" class="col-lg-9" style="background-color:goldenrod;">
             <form method="post" action="dashboard form.php" style="background-color:goldenrod;text-align: center;">
             <div class="col-sm-12">
             <div class="row"> 
@@ -91,6 +92,16 @@
             </form>
             </div>
              </div>
+             <script>
+                function tcc(){
+                    var content=document.getElementById("hidenn");
+                    if(content.style.display === "none"){
+                        content.style.display = "block";
+                    }else{
+                        content.style.display = "none";
+                    }
+                }
+            </script>
         </div>
         </div>
     </div>

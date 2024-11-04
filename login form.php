@@ -24,14 +24,14 @@ if($result->num_rows > 0){
         exit();
     }
     else {
-        header("Location: login form.html?incorrect password or email!!!");
+        header("Location: login fom.php?incorrect password or email!!!");
         exit();
     }
 }
 else {
-    echo "<script>alert('user not found');</script>";
-    echo "<script>window.location.href = 'login form.html';</script>";
-    
+    echo "<script>alert('user not found') ;</script>";
+    echo "<script>window.location.href = 'login fom.php';</script>";
+    echo "name ".$_SESSION['email'];
         exit();
 }
 }

@@ -1,0 +1,1 @@
+Web based system developed from the scratch for event vending and catering services to the community. The aim of this system is to enable customers to have their dream event at the affordable cost so far also to reduce work loads form the customer and letting them prepareing for their event.

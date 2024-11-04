@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script src="jquery-3.7.0.min.js"></script>
+    <style>
+          .hidden{display: none;}
+        body{background-color: goldenrod;}
+        header,footer{color:brown;text-align: center;background-color: goldenrod;}    
+    </style>
+</head>
+<body>
+    <header>
+        <p><marquee behavior="alternate"><i>Welcome</i></marquee></p>
+    <h1><b><i>SHEREHESHA MAEVENT</i></b></h1>
+    </header>
+    <hr>
+    <div class="row">
+        <div class="col-md-12" style="background-color:goldenrod;">
+    <div class="row">
+        <div  class="col-sm-3" style="background-color: goldenrod;">
+            <input type="button" class="button btn-warning btn-sm" onclick="tc()" value="HOME">
+        <div id="hiden" class="hidden">    
+        <table class="table table-hover table-striped">
+            <tr><td>About us</td></tr>
+            <tr><td>comment</td></tr>
+            <tr><td><a href="event list conn.php">Your Events</a></td></tr>
+        </table>
+         </div>
+          <script>
+            function tc(){
+                var content=document.getElementById("hiden");
+                if(content.style.display === "none"){
+                    content.style.display = "block";
+                }else{
+                    content.style.display = "none";
+                }
+            }
+        </script>
+        </div>
+        <div class="col-lg-9" style="background-color:goldenrod;">
+            <form method="post" action="dashboard form.php" style="background-color:goldenrod;text-align: center;">
+            <div class="col-sm-12">
+            <div class="row"> 
+                 <div class="col-md-6" style="text-align: left;">       
+                <div class="form group" class="form-group">
+                    <p><u><b><i>Event details</i></b></u></p>
+                    Event type: <select  class="form-control"  name="etype" required>
+                        <option >Happy birthday</option>
+                        <option >Wedding</option>
+                        <option >Family meeting</option>
+                        <option >Send-offs</option>
+                        <option >Engagement ceremony </option>
+                     </select><br>
+                </div>
+                <div class="form-group">
+                     Number of invites:<input type="text" class="form-control" name="ninvite" required> <br>
+                    </div>  
+                    <div class="form-group">   
+                     Date of Event: <input type="date" class="form-control" name="devent" required><br>
+                    </div>
+                    <div class="form-group">
+                     Time of Event:<input type="time" class="form-control" name="tevent" required><br>
+                    </div>
+                    <div class="form-group">
+                     Budget:<input type="text" class="form-control" placeholder="Elf hamsini" name="budget" required><br>
+                    </div>
+            </div>
+             <div class="col-md-6">
+                <p><u><b><i>Peronal details</i></b></u></p>
+                <div class="form-group">
+                    User Email:<input type="email"  class="form-control"  name="email" required> <br>
+                    </div>
+                <div class="form-group">
+                    Client phone:<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="like: 123-456-7890" class="form-control"  name="pnc" required> <br>
+                    </div>
+                    <div class="form-group">
+                        Owner phone:<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="like: 123-456-7890" class="form-control"  name="pno"> <br>
+                        </div>
+                        <div class="form-group">
+                            Relative phone:<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="like: 123-456-7890" class="form-control"  name="pnr"> <br>
+                            </div>
+                    <div class="form-group">
+                     Address: <input type="text" placeholder="Region,district,street" class="form-control" name="address" required><br>
+                    </div>
+             </div>
+             <input type="submit" class="button btn-warning btn-sm" value="click"><br>
+            </form>
+            </div>
+             </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div> 
+    <footer>
+        <div class="container">
+        <table class="table table-hover table-striped table-bordered">
+            <tr><th>Contact</th><th>Andress</th><th>About us</th></tr>
+            <tr>
+                <td>
+                    Email:aziziomar@gmail.com<br>
+                    Number:+255713685624
+                </td>
+                <td>
+                    Tanzania,Dodoma,Udom,CIVE
+                </td>
+                <td>
+                    <p>
+                        kuna kitu kinahitajika
+                    </p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <marquee><p copy &>SHEREHESHA MAEVENT</p></marquee>
+    </footer>
+    <script src="jquery-3.7.0.min.js"></script>  
+    <script src="bootstrap.bundle.min.js"></script> 
+</body>
+</html>

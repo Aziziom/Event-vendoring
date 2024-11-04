@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration formr</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <style>
+       body{background-color: goldenrod;}
+        header,footer{color:brown;text-align: center;background-color: goldenrod;}    
+    </style>
+</head>
+<body>
+    <header>
+        <p><marquee behavior="alternate"><i>Welcome</i></marquee></p>
+    <h1><b><i>SHEREHESHA MAEVENT</i></b></h1>
+    <span id="text" style="color: red;"><b><i></i></b></span>
+    </header>
+    <hr>
+<div class="container" style="text-align: center;padding-left: 400px;padding-right: 300px;" >
+<h1 style="padding-right: 40px;"><b><i>REGISTATTION FORM</i></h1>
+
+    <form id="regi" method="POST" action="registartion connnection.php" onsubmit="return validateform()">
+       <div class="form-group">
+        First Name: <input type="text" class="form-control" id="fname" name="fname" placeholder="*" required> <br>
+        <span id="fnameela" style="color:red"></span>
+       </div>
+       <div class="form-group">
+        Last Name: <input type="text" class="form-control" id="lname" name="lname"> <br>
+    </div>
+    <div class="form-group">
+        Email: <input type="email" class="form-control" id="email" name="email" placeholder="*" required><br>
+        <span id="emailela" style="color:red"></span>
+    </div>
+    <div class="form-group">
+        Phone Number: <input type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  placeholder="like: 123-456-7890" id="pno" name="pno" placeholder="*" required><br>
+        <span id="pnoela" style="color: red;"></span>
+    </div>
+    <div class="form-group">
+        Password: <input type="password" class="form-control" id="pass" name="pass" placeholder="*" required><br>
+        <span id="passela" style="color: red;"></span>
+    </div>
+        <input type="submit" class="btn btn-warning" value="submit">
+    </form>
+</div>
+<script>
+    function validateform(){
+        var ufname= document.getElementById("fname").value;
+        var uemail= document.getElementById("email").value;
+        var isvalid= true;
+        if(ufname=== "" || uemail=== "" ){
+            document.getElementById("fnameela").innerHTML='required';
+            document.getElementById("emailela").innerHTML='required';
+            isvalid = false;
+        }
+        alert('congraturation!! you are succesifully registered');
+        document.getElementById("text").innerHTML='congraturation!! succesifully registered';
+       return isvalid;
+    }
+</script>
+<hr>
+<footer>
+    <div class="container">
+    <table class="table table-hover table-striped table-bordered">
+        <tr><th>Contact</th><th>Andress</th><th>About us</th></tr>
+        <tr>
+            <td>
+                Email:aziziomar@gmail.com<br>
+                Number:+255713685624
+            </td>
+            <td>
+                Tanzania,Dodoma,Udom,CIVE
+            </td>
+            <td>
+                <p>
+                    kuna kitu kinahitajika
+                </p>
+            </td>
+        </tr>
+    </table>
+    </div>
+</footer>
+   <script src="jquery-3.7.0.min.js"></script>  
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
